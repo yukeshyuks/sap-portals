@@ -1,0 +1,59 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	controllerName="newloginnewlogin.controller.Production" xmlns:html="http://www.w3.org/1999/xhtml">
+	<App id="app">
+		<pages>			
+
+			<Page title="Production Order">
+				<headerContent>
+					<Button id="_IDGenButton3" icon="sap-icon://sys-back" tooltip="Dashboard" text="Back" press="back"/>
+				</headerContent>
+				<content>
+					<VBox alignItems="Center" alignContent="Center" fitContainer="true">
+						<items><Input id="fromdate" type="Date" placeholder="fromdate" width="100%"/> <Input id="todate" type="Date" placeholder="todate" width="100%"/> <Button press="onSubmit" text="Submit"/>
+					
+					
+							<Table id="Productionorder" items="{/results}">
+								<columns>
+									<Column>
+										<Text text="Production Order"></Text>
+									</Column>
+									<Column>
+										<Text text="Master Data"></Text>
+									</Column>
+									<Column>
+										<Text text="Position Number"></Text>
+									</Column>
+									<Column>
+										<Text text="Start Date"></Text>
+									</Column>
+									<Column>
+										<Text text="End Date"></Text>
+									</Column>
+									<Column>
+										<Text text="Order Item Quantity"></Text>
+									</Column>
+									<Column>
+										<Text text="Material Number"></Text>
+									</Column>
+								</columns>
+								<items>
+									<ColumnListItem>
+										<cells>
+											<Text text="{Mandt}"></Text>
+											<Text text="{Aufnr}"></Text>
+											<Text text="{Posnr}"></Text>
+											<Text text="{Strmp}"></Text>
+											<Text text="{Etrmp}"></Text>
+											<Text text="{Psmng}"></Text>
+											<Text text="{Matnr}"></Text>
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+						</items>
+					</VBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

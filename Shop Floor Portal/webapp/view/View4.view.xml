@@ -1,0 +1,18 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="newloginnewlogin.controller.View4"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+				<pages>
+			<Page id="_IDGenPage2" title="Dashboard" class="background_gradient_2">
+				<headerContent>
+					<Button id="_IDGenButton3" icon="sap-icon://log" tooltip="Logout" text="Logout" press="logout"/>
+				</headerContent>
+				<content>
+					<TileContainer id="_IDGenTileContainer1" width="100%">
+						<StandardTile id="Inspect" icon="sap-icon://legend" title="Planned Order" press="onClick"/>
+						<StandardTile id="Results" icon="sap-icon://factory" title="Production Order" press="onClick1"/>
+						</TileContainer>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

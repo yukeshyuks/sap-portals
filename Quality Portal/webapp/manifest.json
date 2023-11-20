@@ -1,0 +1,178 @@
+{
+  "_version": "1.37.0",
+  "sap.app": {
+    "id": "qualityportal",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.11.4",
+      "toolsId": "9fdd2785-66c9-45ae-8f86-78a7f51c3912"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/sap/opu/odata/sap/Z_POO_ODATA_QM_SRV/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "localUri": "localService/metadata.xml",
+          "odataVersion": "2.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.96.6",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.f": {},
+        "sap.suite.ui.generic.template": {},
+        "sap.ui.comp": {},
+        "sap.ui.generic.app": {},
+        "sap.ui.table": {},
+        "sap.ushell": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "qualityportal.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {}
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "qualityportal.view",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "clearControlAggregation": false
+      },
+      "routes": [
+        {
+          "name": "RouteLoginPage",
+          "pattern": "",
+          "target": [
+            "TargetLoginPage"
+          ]
+        },
+        {
+          "name": "Dashboard",
+          "pattern": "RouteDashboard",
+          "target": [
+            "TargetDashboard"
+          ]
+        },
+        {
+          "name": "InspectionLot",
+          "pattern": "RouteInspectionLot",
+          "target": [
+            "TargetInspectionLot"
+          ]
+        },
+        {
+          "name": "ResultRecord",
+          "pattern": "RouteResultRecord",
+          "target": [
+            "TargetResultRecord"
+          ]
+        },
+        {
+          "name": "UsageDecision",
+          "pattern": "RouteUsageDecision",
+          "target": [
+            "TargetUsageDecision"
+          ]
+        }
+			
+      ],
+      "targets": {
+        "TargetLoginPage": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "LoginPage",
+          "viewName": "LoginPage"
+        },
+        "TargetDashboard": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Dashboard",
+          "viewName": "Dashboard"
+        },
+        "TargetInspectionLot": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "InspectionLot",
+          "viewName": "InspectionLot"
+        },
+        "TargetResultRecord": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "ResultRecord",
+          "viewName": "ResultRecord"
+        },
+        "TargetUsageDecision": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "UsageDecision",
+          "viewName": "UsageDecision"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "qualityportal.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "App"
+    }
+  }
+}

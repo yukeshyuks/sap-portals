@@ -1,0 +1,23 @@
+<mvc:View controllerName="newloginnewlogin.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m">
+	<App id="app">
+		<pages>
+			<Page title="Shopfloor portal">
+				<content>
+					<VBox justifyContent="Center" alignItems="Center" alignContent="Center" fitContainer="true">
+					<items>	
+					<Label text="Login "></Label>
+					<Input id="user" placeholder="Enter UserId"></Input>
+					<Input id="password" placeholder="Enter Password"></Input>
+					<Button press="onClick" text="Login"></Button>
+					</items>
+
+					</VBox>
+				</content>
+			</Page>
+		</pages>
+		
+	</App>
+	
+	
+</mvc:View>

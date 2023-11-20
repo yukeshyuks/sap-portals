@@ -1,0 +1,24 @@
+<app-profilenav></app-profilenav>
+<div class="card-container">
+  <img mat-card-image class="example-card" src="https://images.pexels.com/photos/2078774/pexels-photo-2078774.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Profile">
+  <div class="overlay">
+    <p>Profile</p>
+  </div>
+<mat-card class="card">
+<div style="overflow-x:auto;">
+    <table id="users">
+     <tr id="header"><th *ngFor ="let column of header">{{column}}   </th></tr>
+  
+      <td>{{empprofile['Envelope']['Body']['ZFM_YUKS_EMP_PROFILE.Response']['RESULT']['VORNA']}}        </td>
+      <td>{{empprofile['Envelope']['Body']['ZFM_YUKS_EMP_PROFILE.Response']['RESULT']['NACHN']}} </td>
+      <td>{{empprofile['Envelope']['Body']['ZFM_YUKS_EMP_PROFILE.Response']['RESULT']['PERSK']}} </td>
+        <td>{{empprofile['Envelope']['Body']['ZFM_YUKS_EMP_PROFILE.Response']['RESULT']['GBDAT']}}</td>
+          <td>{{empprofile['Envelope']['Body']['ZFM_YUKS_EMP_PROFILE.Response']['RESULT']['LAND']}} </td>
+            <td>{{empprofile['Envelope']['Body']['ZFM_YUKS_EMP_PROFILE.Response']['RESULT']['PSTLZ']}} </td>
+ 
+
+ </table>
+</div>
+</mat-card>
+
+</div>

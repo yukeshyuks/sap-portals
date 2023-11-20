@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+<div class="card-container">
+  <img mat-card-image class="example-card" src="https://images.unsplash.com/photo-1475503572774-15a45e5d60b9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Leave">
+  <div class="overlay">
+    <p>Leave</p>
+  </div>
+  <mat-card class="card">
+    <div style="overflow-x:auto;">
+        <table id="users">
+         <tr id="header"><th *ngFor ="let column of header">{{column}}   </th></tr>
+         <tr *ngFor ="let value of empleave['Envelope']['Body']['ZFM_YUKS_EMP_LEAVE.Response']['LEAVE_RES']['item']">   
+          <td>{{value.ABSENCEDAYS}}</td>
+          <td>{{value.ABSENCEHOURS}}</td>
+          <td>{{value.NAMEOFABSENCETYPE}}</td>
+          <td>{{value.ABSENCETYPE}}</td>
+          <td>{{value.VALIDBEGIN}}</td>
+          <td>{{value.VALIDEND}}</td>
+      </tr>
+         </table>   
+    </div>
+
+  </mat-card>
+
+</div>
