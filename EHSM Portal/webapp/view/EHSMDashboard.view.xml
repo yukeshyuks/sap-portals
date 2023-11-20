@@ -1,0 +1,29 @@
+<mvc:View controllerName="ehsmehsm.controller.EHSMDashboard"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="_IDGenPage1" title="Dashboard" class="dashbg">
+        <content>
+						<Button id="_IDGenButton1" text="Logout" icon="sap-icon://action" press="onLogout" class="logout"/>
+						<Label text="Hai" id="userdetails" class="welcome"></Label>
+					<VBox id="_IDGenVBox1" fitContainer="true" justifyContent="Center" alignItems="Center" alignContent="Center">
+						<HBox id="_IDGenHBox1" fitContainer="true" justifyContent="Center" alignItems="Center" alignContent="Center">
+							<GenericTile id="_IDGenGenericTile1" class="all" header="Incident Management" press="onIM">
+								<tileContent >
+									<TileContent id="_IDGenTileContent1">
+										<Image id="_IDGenImage1" src="https://cdn3.iconfinder.com/data/icons/risk-management-3/512/incident-handing-chart-graph-crisis-256.png" width="50%" height="100%"/>
+									</TileContent>
+								</tileContent>
+							
+							</GenericTile>
+							<GenericTile id="_IDGenGenericTile2" class="all" header="Risk Management" press="onRM">
+							<tileContent >
+									<TileContent id="_IDGenTileContent2">
+										<Image id="_IDGenImage2" src="https://cdn1.iconfinder.com/data/icons/business-optimization-5/62/uncertainty-risk-eliminate-management-predict-256.png" width="50%" height="100%"/>
+									</TileContent>
+								</tileContent>
+							</GenericTile>
+						</HBox>
+					</VBox>
+				</content>
+    </Page>
+</mvc:View>

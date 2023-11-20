@@ -1,0 +1,51 @@
+<mvc:View controllerName="ehsmehsm.controller.EHSMInciMang"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <App id="_IDGenApp1">
+		<pages>
+			<Page id="_IDGenPage1" title="Incident Management">
+				<SearchField id="_IDGenSearchField1" liveChange="onSearch" placeholder="Search by Record Number" width="23%"/>
+				
+				<Button id="_IDGenButton1" text="Go to Dashboard" icon="sap-icon://action" press="ongoto" class="ongoto"/>
+				<ScrollContainer id="_IDGenScrollContainer1" height='100%' vertical='true'>
+					<Table id="incidenttable" mode="SingleSelectMaster" selectionChange="displaydetails_inci" items="{inci_list>/}">
+						<columns>
+							<Column id="_IDGenColumn1">
+								<Text id="_IDGenText1" text="Record Number"/>
+							</Column>
+							<Column id="_IDGenColumn2">
+								<Text id="_IDGenText2" text="Event Description"/>
+							</Column>
+							<Column id="_IDGenColumn3">
+								<Text id="_IDGenText3" text="Machine Description"/>
+							</Column>
+							<Column id="_IDGenColumn4">
+								<Text id="_IDGenText4" text="Accident Location"/>
+							</Column>
+							<Column id="_IDGenColumn5">
+								<Text id="_IDGenText5" text="Accident Location Description"/>
+							</Column>
+							<Column id="_IDGenColumn6">
+								<Text id="_IDGenText6" text="Status"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem id="_IDGenColumnListItem1" vAlign="Middle">
+								<cells>
+									<Text id="_IDGenText7" text="{inci_list>Recn}"/>
+									<Text id="_IDGenText8" text="{inci_list>Evdesc}"/>
+									<!--<Text text="{noti_list>Funcloc}"/>-->
+									<Text id="_IDGenText9" text="{inci_list>Eqdesc}"/>
+									<Text id="_IDGenText10" text="{inci_list>Acloc}"/>
+									<!--<Text text="{noti_list>Notifdate}"/>-->
+									<Text id="_IDGenText11" text="{inci_list>Aclocdesc}"/>
+									<Text id="_IDGenText12" text="{inci_list>Iastatus}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</ScrollContainer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

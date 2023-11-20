@@ -1,0 +1,163 @@
+{
+  "_version": "1.58.0",
+  "sap.app": {
+    "id": "ehsmehsm",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.11.3",
+      "toolsId": "e96c3ba1-f5ef-4c4e-9bf7-d428e91fb611"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/sap/opu/odata/sap/Z_POO_ODATA_EHSM_SRV/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "localUri": "localService/metadata.xml",
+          "odataVersion": "2.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.120.1",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.f": {},
+        "sap.suite.ui.generic.template": {},
+        "sap.ui.comp": {},
+        "sap.ui.generic.app": {},
+        "sap.ui.table": {},
+        "sap.ushell": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "ehsmehsm.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {}
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "ehsmehsm.view",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "clearControlAggregation": false
+      },
+      "routes": [
+        {
+          "name": "RouteEHSMLoginPage",
+          "pattern": "",
+          "target": [
+            "TargetEHSMLoginPage"
+          ]
+        },
+        {
+          "name": "EHSMDashboard",
+          "pattern": "RouteEHSMDashboard",
+          "target": [
+            "TargetEHSMDashboard"
+          ]
+        },
+        {
+          "name": "EHSMInciMang",
+          "pattern": "RouteEHSMInciMang",
+          "target": [
+            "TargetEHSMInciMang"
+          ]
+        },
+        {
+          "name": "EHSMRiskMang",
+          "pattern": "RouteEHSMRiskMang",
+          "target": [
+            "TargetEHSMRiskMang"
+          ]
+        }
+      ],
+      "targets": {
+        "TargetEHSMLoginPage": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "EHSMLoginPage",
+          "viewName": "EHSMLoginPage"
+        },
+        "TargetEHSMDashboard": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "EHSMDashboard",
+          "viewName": "EHSMDashboard"
+        },
+        "TargetEHSMInciMang": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "EHSMInciMang",
+          "viewName": "EHSMInciMang"
+        },
+        "TargetEHSMRiskMang": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "EHSMRiskMang",
+          "viewName": "EHSMRiskMang"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "ehsmehsm.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "App"
+    }
+  }
+}
