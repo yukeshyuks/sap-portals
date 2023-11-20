@@ -1,0 +1,64 @@
+.example-card {
+  margin-left:-17px;
+  width: 600px;
+  height: 955px;
+  margin-top: 3px;
+  opacity: 0.9;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  margin-left: 235px;
+  text-align: center;
+  color:rgb(255, 255, 255);
+  font-size: large;
+  font-weight: 650;
+}
+
+.card-container {
+  display: flex;
+
+}
+
+.card{
+  margin-top:100px;
+  margin-left: 30px;
+  height: fit-content;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  
+}
+
+thead th:nth-child(1) {
+  width: 10%;
+}
+
+thead th:nth-child(2) {
+  width: 20%;
+}
+
+thead th:nth-child(3) {
+  width: 15%;
+}
+
+thead th:nth-child(4) {
+  width: 35%;
+}
+
+th,
+td {
+  padding: 20px;
+  border: 3px solid rgb(34, 46, 87);
+  text-align: center;
+}
+
+.downloadpdfbtn{
+  display: flex;
+  flex-direction: column;
+  top:70px;
+}

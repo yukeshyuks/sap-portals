@@ -1,0 +1,38 @@
+<app-finnav></app-finnav>
+<div class="card-container">
+  <img mat-card-image class="example-card" src="https://images.unsplash.com/photo-1595513693496-ff2a21d4ee8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=419&q=80" alt="Finance">
+  <div class="overlay">
+    <p>Payments</p>
+    </div>
+    <mat-card class="card">
+      <div style="overflow-x:auto;">
+          <table id="users">
+           <tr id="header">
+            <th *ngFor ="let column of header">
+                {{column}}
+            </th>
+        </tr>
+        <!-- <tr *ngFor ="let value of custpayments['Envelope']['Body']['ZSD_CUST_PAYMENTSYResponse']['IT_DET']['item']">           
+          <td>{{value.CUSTOMER}}</td>
+          <td>{{value.DOC_NO}}</td>
+          <td>{{value.COMP_CODE}}</td>
+          <td>{{value.DOC_DATE}}</td>
+          <td>{{value.LC_AMOUNT}}</td>
+          <td>{{value.CURRENCY}}</td>
+      </tr> -->
+        <tr>
+          <td>{{custpayments['Envelope']['Body']['ZSD_CUST_PAYMENTSYResponse']['IT_DET']['item']['CUSTOMER']}} </td>
+          <td>{{custpayments['Envelope']['Body']['ZSD_CUST_PAYMENTSYResponse']['IT_DET']['item']['DOC_NO']}}</td>
+          <td>{{custpayments['Envelope']['Body']['ZSD_CUST_PAYMENTSYResponse']['IT_DET']['item']['COMP_CODE']}}</td>
+          <td>{{custpayments['Envelope']['Body']['ZSD_CUST_PAYMENTSYResponse']['IT_DET']['item']['DOC_DATE']}}</td>
+          <td>{{custpayments['Envelope']['Body']['ZSD_CUST_PAYMENTSYResponse']['IT_DET']['item']['LC_AMOUNT']}}</td>
+          <td>{{custpayments['Envelope']['Body']['ZSD_CUST_PAYMENTSYResponse']['IT_DET']['item']['CURRENCY']}}</td>
+         
+      </tr>
+           
+       </table>
+      </div>
+    </mat-card>
+
+
+  </div>

@@ -1,0 +1,29 @@
+<app-finnav></app-finnav>
+<div class="card-container">
+  <img mat-card-image class="example-card" src="https://images.unsplash.com/photo-1580048915913-4f8f5cb481c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGZpbmFuY2V8ZW58MHwxfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Finance">
+  <div class="overlay">
+    <p>Invoice</p>
+  </div>
+  <div class="downloadpdfbtn">
+  <mat-card class="card">
+    <div style="overflow-x:auto;">
+        <table id="users">
+         <tr id="header"><th *ngFor ="let column of header">{{column}}   </th></tr>
+         <tr *ngFor ="let value of custinvoice['Envelope']['Body']['ZSD_CUST_INVOICEYResponse']['IT_INVOICE']['item']">           
+          <td>{{value.BUKRS}}</td>
+          <td>{{value.KALSM}}</td>
+          <td>{{value.ERDAT}}</td>
+          <td>{{value.KIDNO}}</td>
+          <td>{{value.LAND1}}</td>
+          <td>{{value.CMWAE}}</td>
+      </tr>
+         </table>   
+          <mat-card-actions style = "display:flex; flex-direction: column; align-items: center;margin-top: 10px;margin-bottom:10px">
+          <button mat-button color="black" style="background-color:greenyellow" (click)="downloadPDF()"> DOWNLOAD</button>
+      </mat-card-actions>
+    </div>
+
+  </mat-card>
+
+</div>
+</div>

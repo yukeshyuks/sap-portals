@@ -1,0 +1,23 @@
+<app-dashnav></app-dashnav>
+<div class="card-container">
+  <div class="float">
+      <img mat-card-image class="example-card" src="https://images.pexels.com/photos/3197390/pexels-photo-3197390.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Inquiry">
+  <div class="overlay">
+    <p>Quotation</p>
+  </div>
+  </div>
+  <mat-card class="card">
+    <div style="overflow-x:auto;">
+        <table id="users">
+         <tr id="header"><th *ngFor ="let column of header">{{column}}   </th></tr>
+         <tr *ngFor ="let value of vendquota['Envelope']['Body']['ZVP_VENDOR_RECEIPT.Response']['HEADER_RESULT']['item']">           
+          <td>{{value.INV_DOC_NO}}</td>
+          <td>{{value.GROSS_AMNT}}</td>
+          <td>{{value.PSTNG_DATE}}</td>
+          <td>{{value.CURRENCY}}</td>
+          <td>{{value.INVOICE_STATUS}}</td>
+          </tr>      
+            </table>
+    </div>
+  </mat-card>
+</div>

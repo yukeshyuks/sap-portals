@@ -1,0 +1,55 @@
+<div class="background">
+  <div class="shape"></div>
+  <div class="shape"></div>
+</div>
+<mat-card class="example-card">
+  <mat-card-content>
+    <div class="header">
+      <h3 >Vendor login</h3>
+    </div>
+    <form (ngSubmit)="onLogin()" name="loginForm" [formGroup]="loginForm">
+      
+      <div class="userinput">
+        <label for="username">Customer ID</label>
+        <mat-form-field class="full-width" appearance="outline">
+          
+          <input
+          class="form-control form-control-lg"
+            matInput
+            minlength="3"
+            class="input1"
+            formControlName="userid"
+            autocomplete="off"
+            placeholder="Enter User Id"
+            required
+          />
+          <mat-error *ngIf="!loginForm.controls['userid'].valid">
+            Enter proper Id
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <label for="password">Password</label>
+        <mat-form-field class="full-width" appearance="outline">
+          
+          <input
+          class="form-control form-control-lg"
+            formControlName="password"
+            placeholder="Enter password"
+            matInput
+            class="input1"
+            autocomplete="off"
+            type="password"
+           required
+          />
+      
+          <mat-error *ngIf="!loginForm.controls['password'].valid">
+            Enter proper password
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <button name="login" type="Submit" >Log In</button>
+    </form>
+  </mat-card-content>
+</mat-card>

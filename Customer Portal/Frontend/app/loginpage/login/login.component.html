@@ -1,0 +1,60 @@
+
+
+
+<div class="background">
+    <div class="shape"></div>
+    <div class="shape"></div>
+  </div>
+  <mat-card class="example-card">
+    <mat-card-content>
+      <div class="header">
+        <h3 >Customer login</h3>
+      </div>
+      <form (ngSubmit)="onLogin()" name="loginForm" [formGroup]="loginForm">
+        
+        <div class="userinput">
+          <label for="username">Customer ID</label>
+          <mat-form-field class="full-width" appearance="outline">
+            
+            <input
+            class="form-control form-control-lg"
+              matInput
+              style="-webkit-text-fill-color: rgb(0, 0, 0)"
+              class="input1"
+              formControlName="username"
+              autocomplete="off"
+              placeholder="Enter User Id"
+              required
+            />
+            <mat-error *ngIf="loginForm.controls['username'].invalid&& (loginForm.controls['username'].dirty || loginForm.controls['username'].touched)">
+              Enter proper Id
+            </mat-error>
+          </mat-form-field>
+        </div>
+  
+        <div>
+          <label for="password">Password</label>
+          <mat-form-field class="full-width" appearance="outline">
+            
+            <input
+            class="form-control form-control-lg"
+              formControlName="password"
+              placeholder="Enter password"
+              matInput
+              style="-webkit-text-fill-color: rgb(0, 0, 0)"
+              class="input1"
+              autocomplete="off"
+              type="password"
+             required
+            />
+        
+            <mat-error *ngIf="loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)">
+              Enter proper password
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <button name="login" type="Submit" >Log In</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+  

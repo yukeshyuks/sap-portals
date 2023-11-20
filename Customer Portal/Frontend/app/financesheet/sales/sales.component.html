@@ -1,0 +1,22 @@
+<app-finnav></app-finnav>
+<div class="card-container">
+  <img mat-card-image class="example-card" src="https://images.unsplash.com/photo-1611328573001-13cf452dd8a9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzZ8fG1hcmtldGluZ3xlbnwwfDF8MHx8&auto=format&fit=crop&w=500&q=60" alt="Sales">
+  <div class="overlay">
+    <p>Sales data</p>
+  </div>
+  <mat-card class="card">
+    <div style="overflow-x:auto;">
+        <table id="users">
+         <tr id="header"><th *ngFor ="let column of header">{{column}}   </th></tr>
+         <tr *ngFor ="let value of custsales['Envelope']['Body']['ZSD_CUST_SOYResponse']['IT_INVOICE']['item']">           
+          <td>{{value.BUKRS}}</td>
+          <td>{{value.VBELN}}</td>
+          <td>{{value.KURRF}}</td>
+          <td>{{value.WAERK}}</td>
+          <td>{{value.LAND1}}</td>
+      </tr>
+   
+     </table>
+    </div>
+  </mat-card>
+</div>

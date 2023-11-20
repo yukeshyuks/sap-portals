@@ -1,0 +1,26 @@
+<app-custnav></app-custnav>
+<div class="card-container">
+  <img mat-card-image class="example-card" src="https://images.unsplash.com/photo-1507208773393-40d9fc670acf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c2FsZXN8ZW58MHwxfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Inquiry">
+  <div class="overlay">
+    <p>Sales order</p>
+  </div>
+  <mat-card class="card">
+    <div style="overflow-x:auto;">
+        <table id="users">
+         <tr id="header"><th *ngFor ="let column of header">{{column}}   </th></tr>
+         <tr *ngFor ="let value of custsales['Envelope']['Body']['ZSD_CUST_SOYResponse']['IT_INVOICE']['item']">           
+          <td>{{value.FKDAT}}</td>
+          <td>{{value.ZTERM}}</td>
+          <td>{{value.KURRF_DAT}}</td>
+          <td>{{value.REGIO}}</td>
+          <td>{{value.KIDNO}}</td>
+      </tr>      
+          <!-- <td>{{custsales['Envelope']['Body']['ZSD_CUST_SOYResponse']['IT_INVOICE']['item']['FKDAT']}}        </td>
+          <td>{{custsales['Envelope']['Body']['ZSD_CUST_SOYResponse']['IT_INVOICE']['item']['ZTERM']}} 
+            <td>{{custsales['Envelope']['Body']['ZSD_CUST_SOYResponse']['IT_INVOICE']['item']['REGIO']}} 
+              <td>{{custsales['Envelope']['Body']['ZSD_CUST_SOYResponse']['IT_INVOICE']['item']['KURRF_DAT']}} 
+                <td>{{custsales['Envelope']['Body']['ZSD_CUST_SOYResponse']['IT_INVOICE']['item']['KIDNO']}}        -->
+     </table>
+    </div>
+  </mat-card>
+</div>

@@ -1,0 +1,23 @@
+<app-custnav> </app-custnav>
+<div class="card-container">
+  <div class="float">
+      <img mat-card-image class="example-card" src="https://images.pexels.com/photos/3197390/pexels-photo-3197390.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Inquiry">
+  <div class="overlay">
+    <p>Inquiry</p>
+  </div>
+  </div>
+  <mat-card class="card">
+    <div style="overflow-x:auto;">
+        <table id="users">
+         <tr id="header"><th *ngFor ="let column of header">{{column}}   </th></tr>
+         <tr *ngFor ="let value of custinquiry['Envelope']['Body']['ZSD_CUST_ENQUIRYYResponse']['IT_INQUIRY']['item']">           
+          <td>{{value.SALE_DOCUMENT}}</td>
+          <td>{{value.SOLDTO_PARTY}}</td>
+          <td>{{value.DOCUMENT_DATE}}</td>
+          <td>{{value.NET_VALUE}}</td>
+          <td>{{value.TELEPHONE}}</td>
+          </tr>      
+            </table>
+    </div>
+  </mat-card>
+</div>

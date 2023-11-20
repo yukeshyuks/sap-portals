@@ -1,0 +1,47 @@
+<app-finnav></app-finnav>
+<div class="card-container">
+  <img mat-card-image class="example-card" src="https://images.unsplash.com/photo-1614260937041-bf8d795cf0bd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y3JlZGl0fGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Memo">
+  <div class="overlay">
+    <p>Credit and Debit</p>
+  </div>
+  <div class="aligncards">
+    <h3>Credit Details</h3>
+  <mat-card class="card">
+    
+    <div style="overflow-x:auto;">
+      
+        <table id="users">
+         <tr id="header"><th *ngFor ="let column of header">{{column}}   </th></tr>
+     
+        <tr *ngFor ="let value of custcredit['Envelope']['Body']['ZSD_CUST_CREDITYResponse']['IT_CREDIT']['item']">           
+        <td>{{value.KUNNR}}</td>
+        <td>{{value.BELNR}}</td>
+        <td>{{value.GJAHR}}</td>
+        <td>{{value.BUZEI}}</td>
+        <td>{{value.PSWBT}}</td>
+        <td>{{value.PSWSL}}</td>
+    </tr>
+
+     </table>
+    </div>
+  </mat-card>
+<br >
+<h3>Debit Details</h3>
+  <mat-card class="card">
+    <div style="overflow-x:auto;">
+      
+        <table id="users">
+         <tr id="header"><th *ngFor ="let column of header">{{column}}   </th></tr>
+         <tr *ngFor ="let value of custcredit['Envelope']['Body']['ZSD_CUST_CREDITYResponse']['IT_DEBIT']['item']">           
+          <td>{{value.KUNNR}}</td>
+          <td>{{value.BELNR}}</td>
+          <td>{{value.GJAHR}}</td>
+          <td>{{value.BUZEI}}</td>
+          <td>{{value.PSWBT}}</td>
+          <td>{{value.PSWSL}}</td>
+      </tr>
+     </table>
+    </div>
+  </mat-card>
+</div>
+</div>

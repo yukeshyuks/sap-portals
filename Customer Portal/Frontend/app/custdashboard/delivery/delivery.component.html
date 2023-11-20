@@ -1,0 +1,24 @@
+<app-custnav></app-custnav>
+<div class="card-container">
+  <div class="float">
+  <img mat-card-image class="example-card" src="https://images.unsplash.com/photo-1580674285054-bed31e145f59?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZGVsaXZlcnl8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="List of deliveries">
+  <div class="overlay">
+    <p>List of Deliveries </p>
+  </div>
+</div>
+  <mat-card class="card">
+    <div style="overflow-x:auto;">
+        <table id="users">
+         <tr id="header"><th *ngFor ="let column of header">{{column}}   </th></tr>
+         <tr *ngFor ="let value of custdelivery['Envelope']['Body']['ZSD_CUST_DELIVERYYResponse']['IT_DELIVERY_INFO']['item']">           
+          <td>{{value.VBELN}}</td>
+          <td>{{value.BTGEW}}</td>
+          <td>{{value.SPE_WAUHR_IST}}</td>
+          <td>{{value.LGNUM}}</td>
+          <td>{{value.GEWEI}}</td>
+          <td>{{value.TZONIS}}</td>
+          </tr>      
+            </table>
+    </div>
+  </mat-card>
+</div>
